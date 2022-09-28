@@ -1,0 +1,2 @@
+# GoogleExtension_VerticationCode_Identify
+ 可用於辨識網頁登入驗證碼的google擴充功能

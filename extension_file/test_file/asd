@@ -1,0 +1,4 @@
+  "background": {
+    "service_worker": "click.js",
+    "type": "module"
+},
