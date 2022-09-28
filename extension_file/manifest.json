@@ -20,7 +20,13 @@
             ]
         }
     ],
-    
+    "web_accessible_resources": [{
+        "resources": [
+            "html2canvas.esm.js"
+        ],"matches": [
+            "<all_urls>"
+        ]
+    }],
     "permissions": ["storage", "activeTab", "scripting","contextMenus","tabs"],
     "host_permissions": ["<all_urls>"],
     "action": {
