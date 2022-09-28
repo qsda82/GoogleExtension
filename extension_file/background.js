@@ -2,19 +2,27 @@ function genericOnClick(info, tab) {
     console.log("item " + info.menuItemId + " was clicked");
     console.log("info: " + JSON.stringify(info));
     console.log("tab: " + JSON.stringify(tab));
-    chrome.runtime.reload();
+
+    //chrome.runtime.reload();
     //Add all you functional Logic here
     chrome.tabs.query({
         "active": true,
         "currentWindow": true
-    },  function(tabs) {    
+    },  function(tabs) {  
+             
             chrome.tabs.sendMessage(tabs[0].id, {
                 "functiontoInvoke": "showInfo"
             });
             
+            /*chrome.scripting.executeScript(
+              {
+                target: {tabId: tabs[0].id},
+                files: ['util.js']
+              }
+            );*/
             
     });
-   
+    
 }
 
 // 監聽套件被初始安裝或更新時、瀏覽器更新時
